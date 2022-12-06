@@ -34,10 +34,10 @@ RockPaperScissors = {
 with open("data.txt", "r", newline="\n") as input_data:
     score = 0
     for entry in input_data.readlines():
-        opponent_play, my_play = [x.strip() for x in entry.split(" ")]
+        opponent_choise, my_choise = [x.strip() for x in entry.split(" ")]
         score += (
-            RockPaperScissors[(Shape[opponent_play], Shape[my_play])]
-            + ShapeValue[my_play]
+            RockPaperScissors[(Shape[opponent_choise], Shape[my_choise])]
+            + ShapeValue[my_choise]
         )
 
     print(score)
